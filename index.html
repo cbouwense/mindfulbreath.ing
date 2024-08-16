@@ -2,9 +2,9 @@
 <html>
 
 <head>
-  <title>¯\_(ツ)_/¯</title>
-  <meta name="description" content="Ascii Shrug">
-  <meta name="keywords" content="ascii shrug copy paste">
+  <title>Mindful Breathing</title>
+  <meta name="description" content="A timer to help you breathe better.">
+  <meta name="keywords" content="mindful breath breathing">
   <meta name="author" content="Christian Bouwense">
   <!-- UTF-8 -->
   <meta charset="utf-8">
@@ -60,14 +60,14 @@
 </head>
 
 <body>
-  <p id="shrug">¯\_(ツ)_/¯</p>
+  <p id="cta">breathe in</p>
   <script type="text/javascript">
     let millis = 0;
     let state = 'in';
     setInterval(() => {
         if (state === 'in') {
             if (millis < 5500) {
-                document.getElementById("shrug").textContent = "breathe in";
+                document.getElementById("cta").textContent = "breathe in";
                 millis += 100;
             } else {
                 state = 'out';
@@ -75,7 +75,7 @@
             }
         } else {
             if (millis < 5500) {
-                document.getElementById("shrug").textContent = "breathe out";
+                document.getElementById("cta").textContent = "breathe out";
                 millis += 100;
             } else {
                 state = 'in';
