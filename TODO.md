@@ -1,0 +1,4 @@
+- Add README
+- Add "learn more" section that explains a bit about 5.5s breaths
+- Make a cool animation instead of just changing the text abruptly
+- Make sure it works fine on mobile
