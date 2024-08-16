@@ -60,29 +60,35 @@
 </head>
 
 <body>
-  <p id="cta">breathe in</p>
+  <p id="cta">breathe</p>
+  <p id="in-out">in</p>
   <script type="text/javascript">
     let millis = 0;
     let state = 'in';
+    const tickMs = 100;
     setInterval(() => {
         if (state === 'in') {
             if (millis < 5500) {
-                document.getElementById("cta").textContent = "breathe in";
-                millis += 100;
+                document.getElementById("in-out").textContent = "in";
+                document.getElementById("in-out").style.opacity = 1 - (1 - (millis/ 5500).toFixed(2));
+                
+                millis += tickMs;
             } else {
                 state = 'out';
                 millis = 0;
             }
         } else {
             if (millis < 5500) {
-                document.getElementById("cta").textContent = "breathe out";
-                millis += 100;
+                document.getElementById("in-out").textContent = "out";
+                document.getElementById("in-out").style.opacity = 1 - (millis/ 5500).toFixed(2);
+
+                millis += tickMs;
             } else {
                 state = 'in';
                 millis = 0;
             }
         }
-    }, 100);
+    }, tickMs);
 
   </script>
 </body>
